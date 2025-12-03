@@ -1420,20 +1420,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Music Player -->
-    <div class="music-player hidden">
-        <div class="player-controls">
-            <button class="player-btn" id="prev-btn">
-                <i class="fas fa-step-backward"></i>
-            </button>
-            <button class="player-btn" id="play-btn">
-                <i class="fas fa-play"></i>
-            </button>
-            <button class="player-btn" id="next-btn">
-                <i class="fas fa-step-forward"></i>
-            </button>
-        </div>
         
         <div class="progress-container">
             <div class="progress-bar" id="progress-bar"></div>
@@ -1846,11 +1832,6 @@
         
         // Update progress bar every second (mock)
         setInterval(updateProgressBar, 1000);
-        
-        // Show player after 5 seconds
-        setTimeout(() => {
-            musicPlayer.classList.remove('hidden');
-        }, 5000);
         
         // Particle effect
         function initParticles() {
