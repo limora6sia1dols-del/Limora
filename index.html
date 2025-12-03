@@ -455,10 +455,10 @@
                     <a href="#shop" class="text-white hover:text-gray-200 font-medium">Магазин</a>
                 </nav>
                 
-
-                 
-
- <div class="language-switcher hidden sm:block">
+                <!-- Theme toggle, language and mobile menu button -->
+                <div class="flex items-center space-x-4">
+                    <!-- Language switcher -->
+                    <div class="language-switcher hidden sm:block">
                         <button class="language-btn" id="language-btn">
                             <img src="https://flagcdn.com/ru.svg" alt="Russian" id="current-flag">
                             <span id="current-language">Рус</span>
@@ -500,12 +500,6 @@
                         </button>
                     </div>
                 </div>
-
-
-        
-
-
-
                 
                 <!-- Register button -->
                 <div class="hidden md:block flex-1 flex justify-end">
@@ -1420,6 +1414,20 @@
             </div>
         </div>
     </footer>
+
+    <!-- Music Player -->
+    <div class="music-player hidden">
+        <div class="player-controls">
+            <button class="player-btn" id="prev-btn">
+                <i class="fas fa-step-backward"></i>
+            </button>
+            <button class="player-btn" id="play-btn">
+                <i class="fas fa-play"></i>
+            </button>
+            <button class="player-btn" id="next-btn">
+                <i class="fas fa-step-forward"></i>
+            </button>
+        </div>
         
         <div class="progress-container">
             <div class="progress-bar" id="progress-bar"></div>
@@ -1832,6 +1840,11 @@
         
         // Update progress bar every second (mock)
         setInterval(updateProgressBar, 1000);
+        
+        // Show player after 5 seconds
+        setTimeout(() => {
+            musicPlayer.classList.remove('hidden');
+        }, 5000);
         
         // Particle effect
         function initParticles() {
